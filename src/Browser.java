@@ -44,6 +44,7 @@ public static void setUrl(String url) {
 	public  Browser(ArrayList<String> history) {
         this.history = history;
         history.add(url);
+        
         System.out.println("new history is "+history);
     }
 	
