@@ -18,6 +18,9 @@ public class Browser {
 		return "Browser [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
 				+ "]";
 	}
+    
+    
+    
 
 	public static String getUrl() {
 		return url;
