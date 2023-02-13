@@ -19,18 +19,12 @@ public class Browser {
 				+ "]";
 	}
 
-
-    
 	public static String getUrl() {
 		return url;
 	}
-
-
-	public static void setUrl(String url) {
+public static void setUrl(String url) {
 		Browser.url = url;
 	}
-
-
 
 	public static ArrayList<String> getHistory() {
 		return history;

@@ -7,7 +7,7 @@ public class MainBrowser {
 	    br.setUrl("https://www.google.com");
 	
 	    ArrayList<String> newHistory = new ArrayList<>();
-	    
+	      
 	    newHistory.add("https://www.facebook.com");
 	    newHistory.add("https://www.github.com");
 	    br.setHistory(newHistory);
