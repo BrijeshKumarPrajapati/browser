@@ -1,12 +1,9 @@
 
 import java.util.Arrays;
-
-
-
 import java.util.ArrayList;
 
 public class Browser {
-    private ArrayList<String> history =new ArrayList<>();
+    private static ArrayList<String> history =new ArrayList<>();
     static ArrayList<String> history_1 =new ArrayList<>();
     private ArrayList<String> history_2 =new ArrayList<>();
     ArrayList<String> history_3 =new ArrayList<>();
@@ -37,38 +34,28 @@ public class Browser {
 	}
 	
 	
-	
-	
-	
 
 	public Browser() {}
     
 	
-	
-	
-	
-	
+
     @Override
 	public String toString() {
 		return "Browser [history_2=" + history_2 + ", history_3=" + history_3 + ", history_1=" + history_1 + ", history=" + history +"]";
 	}
     
-    
-   
 
 	public ArrayList<String> getHistory() {
 		return history;
 	}
 
 
-
-	public void setHistory(ArrayList<String> history) {
-		this.history = history;
+	public static void setHistory(ArrayList<String> history) {
+		Browser.history = history;
 	}
-
 	
 
-	public  Browser(ArrayList<String> history) {
+	public Browser(ArrayList<String> history) {
         this.history = history; 
     }
 	
