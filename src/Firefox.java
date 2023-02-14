@@ -4,7 +4,6 @@ public class Firefox extends Browser implements MultipleAccountContainers{
 	private boolean isLocationAccessible;
     private boolean isCameraAccessible;
     private boolean isMicrophoneAccessible;
-    private String containerName;
     
     
        public Firefox(ArrayList<String> history) {
