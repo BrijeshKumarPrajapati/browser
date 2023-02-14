@@ -22,6 +22,36 @@ public class MainBrowser {
 	    Browser browser = new Browser(newHistory);
 	    System.out.println(browser);
 	    System.out.println(zoho);
+	    GoogleChrome googleChrome = new GoogleChrome(newHistory,1); 
+	    googleChrome.whoAmI();
+	    System.out.println(googleChrome.getVersionNumber());
+	    System.out.println(googleChrome.getHistory());
+	    
+	    
+	    
+	    Browser tabOne = new GoogleChrome(newHistory,1);
+	    Browser tabTwo = new Firefox(newHistory);
+	    Browser tabThree = new Firefox(newHistory);
+	    Browser tabFour = new GoogleChrome(newHistory,1);
+	    Browser tabFive = new GoogleChrome(newHistory,1);
+	    Browser tabSix = new GoogleChrome(newHistory,1);
+	    Browser tabSeven = new Firefox(newHistory);
+	    Browser[] allBrowsers = new Browser[] {tabOne, tabTwo, tabThree, tabFour, tabFive, tabSix, tabSeven};
+
+	    int countGoogle = 0;
+	    int countFirefox =0;
+
+	    for (int i = 0; i < allBrowsers.length; i++) {
+	        if (allBrowsers[i] instanceof GoogleChrome) {
+	            countGoogle++;
+	        } else {
+	        	countFirefox++;
+	        }
+	    }
+
+	    System.out.println("Number of GoogleChrome browser instances: " + countGoogle);
+	    
+	    System.out.println("Number of Firefox browser instances: " + countFirefox);
 	}
 }
 
