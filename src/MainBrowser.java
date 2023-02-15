@@ -55,8 +55,15 @@ public class MainBrowser {
 	    }
 
 	    System.out.println("Number of GoogleChrome browser instances: " + countGoogle);
-	    
 	    System.out.println("Number of Firefox browser instances: " + countFirefox);
+	    
+	    
+	    
+	    Integer numTabs = zoho.numberOfTabs;	   
+	    System.out.println("the premitive to object 'autoboxing' "+ numTabs);
+	    int numTabsOpened = zoho.numberOfTabsOpened;
+	    System.out.println("the object to primitive 'unboxing' "+numTabsOpened);
+	   
 	}
 }
 

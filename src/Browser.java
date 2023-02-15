@@ -9,6 +9,10 @@ public class Browser {
     ArrayList<String> history_3 =new ArrayList<>();
     
     
+    int numberOfTabs =20; 
+    Integer numberOfTabsOpened =30;
+   
+    
 	public static ArrayList<String> getHistory_1() {
 		return history_1;
 	}
