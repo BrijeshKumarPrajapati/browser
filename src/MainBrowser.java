@@ -12,7 +12,7 @@ public class MainBrowser {
 	    
 	    zoho.setHistory_1(newHistory);
 	    zoho.setHistory_2(newHistory);
-	    zoho.setHistory_3(newHistory);
+	    zoho.setHistory_3(newHistory); 
 	   
 	   
 	    System.out.println("Browser history: " + zoho.getHistory());
@@ -22,19 +22,24 @@ public class MainBrowser {
 	    Browser browser = new Browser(newHistory);
 	    System.out.println(browser);
 	    System.out.println(zoho);
-	    GoogleChrome googleChrome = new GoogleChrome(newHistory,1); 
+	    GoogleChrome googleChrome = new GoogleChrome(newHistory); 
 	    googleChrome.whoAmI();
-	    System.out.println(googleChrome.getVersionNumber());
+	    System.out.println("The version of google is: "+googleChrome.getVersionNumber());
 	    System.out.println(googleChrome.getHistory());
 	    
+	    Firefox firefox = new Firefox(newHistory);
+	       firefox.addContainer();
+	     firefox.whoAmI();
+	     zoho.whoAmI();
+	    browser.whoAmI();
 	    
 	    
-	    Browser tabOne = new GoogleChrome(newHistory,1);
+	    Browser tabOne = new GoogleChrome(newHistory);
 	    Browser tabTwo = new Firefox(newHistory);
 	    Browser tabThree = new Firefox(newHistory);
-	    Browser tabFour = new GoogleChrome(newHistory,1);
-	    Browser tabFive = new GoogleChrome(newHistory,1);
-	    Browser tabSix = new GoogleChrome(newHistory,1);
+	    Browser tabFour = new GoogleChrome(newHistory);
+	    Browser tabFive = new GoogleChrome(newHistory);
+	    Browser tabSix = new GoogleChrome(newHistory);
 	    Browser tabSeven = new Firefox(newHistory);
 	    Browser[] allBrowsers = new Browser[] {tabOne, tabTwo, tabThree, tabFour, tabFive, tabSix, tabSeven};
 

@@ -5,21 +5,23 @@ public class Firefox extends Browser implements MultipleAccountContainers{
     private boolean isCameraAccessible;
     private boolean isMicrophoneAccessible;
     
-    
+
        public Firefox(ArrayList<String> history) {
     	   super(history);
        }
        
-       public void whoAmI(){
-   		System.out.println("I am firefox");
-   	}
+       @Override
+  	 public void whoAmI(){
+  		 	System.out.println("I am firefox");
+  		}
        
-     
+     @Override
        public void addContainer() {
            
            System.out.println("This is add container:");
        }
-
+     
+    @Override
        public void leaveContainer() {
           
            System.out.println("This is leave container ");
@@ -28,6 +30,6 @@ public class Firefox extends Browser implements MultipleAccountContainers{
 
  interface MultipleAccountContainers{
 	 
-	 public void addContainer();
-	 public void leaveContainer();
+	 public abstract void addContainer();
+	 public abstract void leaveContainer();
 }
