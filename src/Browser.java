@@ -8,16 +8,20 @@ import java.util.ArrayList;
 
 public class Browser {
     private static ArrayList<String> history =new ArrayList<>();
-    static ArrayList<String> history_1 =new ArrayList<>();
+    /*static ArrayList<String> history_1 =new ArrayList<>();
     private ArrayList<String> history_2 =new ArrayList<>();
-    ArrayList<String> history_3 =new ArrayList<>();
+    ArrayList<String> history_3 =new ArrayList<>();*/
+    
+    
     private Map<String, Integer> repeatedUrlsAndCount = new HashMap<String, Integer>(); 
     
     int numberOfTabs =0; 
     Integer numberOfTabsOpened =30;
+    
+    
    
     
-	public static ArrayList<String> getHistory_1() {
+	/*public static ArrayList<String> getHistory_1() {
 		return history_1;
 	}
 
@@ -40,7 +44,7 @@ public class Browser {
 	public void setHistory_3(ArrayList<String> history_3) {
 		this.history_3 = history_3;
 	}
-	
+	*/
 	
 
 	public Browser() {}
@@ -49,7 +53,7 @@ public class Browser {
 
     @Override
 	public String toString() {
-		return "Browser [history_2=" + history_2 + ", history_3=" + history_3 + ", history_1=" + history_1 + ", history=" + history +"]";
+		return "Browser [history=" + history +"]";
 	}
     
 
@@ -58,11 +62,10 @@ public class Browser {
 	}
 
 
-	public static void setHistory(ArrayList<String> history) {
-		Browser.history = history;
+	public void setHistory(ArrayList<String> history) {
+		this.history.addAll(history);
 	}
 	
-
 	public Browser(ArrayList<String> history) {
         this.history = history; 
     }
@@ -73,7 +76,7 @@ public class Browser {
 		System.out.println("I am a browser");
 	}
 	
-	
+	//<---------Exercise 4----------->
 	
 	public void print() {
 
@@ -86,11 +89,13 @@ public class Browser {
 				repeatedUrlsAndCount.put(dummy, 1);
 			}
 
-		}
+	  	}
 		for (Map.Entry<String, Integer> entry : repeatedUrlsAndCount.entrySet()) {
 			System.out.println(entry.getKey() + " ## " + entry.getValue());
 		}
 	}
+	
+	//<--------------------------------------------->
 	
 	
 }
