@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Firefox extends Browser implements MultipleAccountContainers{
+public class Firefox extends Browser implements MultipleAccountContainers {
 	private boolean isLocationAccessible;
     private boolean isCameraAccessible;
     private boolean isMicrophoneAccessible;
@@ -26,6 +26,7 @@ public class Firefox extends Browser implements MultipleAccountContainers{
           
            System.out.println("This is leave container ");
        }
+
 }
 
  interface MultipleAccountContainers{

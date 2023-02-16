@@ -1,5 +1,9 @@
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 import java.util.ArrayList;
 
 public class Browser {
@@ -7,9 +11,9 @@ public class Browser {
     static ArrayList<String> history_1 =new ArrayList<>();
     private ArrayList<String> history_2 =new ArrayList<>();
     ArrayList<String> history_3 =new ArrayList<>();
+    private Map<String, Integer> repeatedUrlsAndCount = new HashMap<String, Integer>(); 
     
-    
-    int numberOfTabs =20; 
+    int numberOfTabs =0; 
     Integer numberOfTabsOpened =30;
    
     
@@ -68,6 +72,26 @@ public class Browser {
 	public void whoAmI(){
 		System.out.println("I am a browser");
 	}
+	
+	
+	
+	public void print() {
+
+		for (int i = 0; i < history.size(); i++) {
+			String dummy = history.get(i);
+
+			if (repeatedUrlsAndCount.containsKey(dummy)) {
+				repeatedUrlsAndCount.put(dummy, repeatedUrlsAndCount.get(dummy) + 1);
+			} else {
+				repeatedUrlsAndCount.put(dummy, 1);
+			}
+
+		}
+		for (Map.Entry<String, Integer> entry : repeatedUrlsAndCount.entrySet()) {
+			System.out.println(entry.getKey() + " ## " + entry.getValue());
+		}
+	}
+	
 	
 }
 

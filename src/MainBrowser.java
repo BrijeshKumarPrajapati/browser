@@ -5,9 +5,10 @@ public class MainBrowser {
 	    Browser zoho = new Browser();
 	    ArrayList<String> newHistory = new ArrayList<>();
 	         
-	    newHistory.add("https://www.facebook.com");
-	    newHistory.add("https://www.github.com");
-	   
+	    newHistory.add("www.facebook.com");
+	    newHistory.add("www.github.com");
+	    newHistory.add("www.twitter.com");
+	    newHistory.add("www.facebook.com");
 	    zoho.setHistory(newHistory);
 	    
 	    zoho.setHistory_1(newHistory);
@@ -32,7 +33,7 @@ public class MainBrowser {
 	     firefox.whoAmI();
 	     zoho.whoAmI();
 	    browser.whoAmI();
-	    
+	    zoho.print();
 	    
 	    Browser tabOne = new GoogleChrome(newHistory);
 	    Browser tabTwo = new Firefox(newHistory);
@@ -61,8 +62,8 @@ public class MainBrowser {
 	    
 	    Integer numTabs = zoho.numberOfTabs;	   
 	    System.out.println("the premitive to object 'autoboxing' "+ numTabs);
-	    int numTabsOpened = zoho.numberOfTabsOpened;
-	    System.out.println("the object to primitive 'unboxing' "+numTabsOpened);
+	   // int numTabsOpened = zoho.numberOfTabsOpened;
+	    //System.out.println("the object to primitive 'unboxing' "+numTabsOpened);
 	   
 	}
 }
