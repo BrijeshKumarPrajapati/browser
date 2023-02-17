@@ -54,11 +54,11 @@ public class MainBrowser {
 	       
 	        //<-----------Exercise 4---------->
 	       
-	    zoho.print();
+	 /*   zoho.print();
 	    
 	    
 	    zoho1.print();
-	    
+	    */
 	    ///-----------------------------
 	    
 	    
@@ -92,7 +92,27 @@ public class MainBrowser {
 	    System.out.println("the premitive to object 'autoboxing' "+ numTabs);
 	   // int numTabsOpened = zoho.numberOfTabsOpened;
 	    //System.out.println("the object to primitive 'unboxing' "+numTabsOpened);*/
-	   
+	    
+	    //<-------Ecercise 5--------->
+	    
+	    Browser.Bookmarks zohoMemberInner = zoho.new Bookmarks();  
+	    
+	    zohoMemberInner.messsageBookmarks();
+	    
+	    
+	    Shortcuts shortcuts = new Shortcuts() {
+	    	@Override
+	    	public void messageShortcuts() {
+	    		System.out.println("this is anonymus inner class");
+	    	}
+	    };
+	    
+	    
+	    Browser.History zohoStaticNested = new Browser.History();
+	    zohoStaticNested.messageHistory();
+	    //<----------------------------->
+	    shortcuts.messageShortcuts();
 	}
+	
 }
 

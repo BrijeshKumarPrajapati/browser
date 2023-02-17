@@ -15,10 +15,10 @@ public class Browser {
     
     private Map<String, Integer> repeatedUrlsAndCount = new HashMap<String, Integer>(); 
     
-    int numberOfTabs =0; 
+   /* int numberOfTabs =0; 
     Integer numberOfTabsOpened =30;
     
-    
+    */
    
     
 	/*public static ArrayList<String> getHistory_1() {
@@ -46,6 +46,24 @@ public class Browser {
 	}
 	*/
 	
+   //<----------------Excercise 5---------->
+    
+    class Bookmarks{  
+    	  void messsageBookmarks(){System.out.println("message from member inner class is: "+ history);}  
+    	 }  
+    
+   // <---------------see line no. 113----------->
+    
+    
+    static class History{
+    	void messageHistory () {
+    		System.out.println("message from static nested class is: "+ history);
+    	}
+    }
+    
+   // <------------------------------>
+    
+    
 
 	public Browser() {}
     
@@ -78,7 +96,7 @@ public class Browser {
 	
 	//<---------Exercise 4----------->
 	
-	public void print() {
+	/*public void print() {
 
 		for (int i = 0; i < history.size(); i++) {
 			String dummy = history.get(i);
@@ -93,11 +111,14 @@ public class Browser {
 		for (Map.Entry<String, Integer> entry : repeatedUrlsAndCount.entrySet()) {
 			System.out.println(entry.getKey() + " ## " + entry.getValue());
 		}
-	}
+	}*/
 	
 	//<--------------------------------------------->
 	
 	
 }
 
+interface Shortcuts{
+	void messageShortcuts();
+}
 
