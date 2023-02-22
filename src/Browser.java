@@ -116,9 +116,6 @@ public class Browser {
 	//<--------------------------------------------->
 	
 	
-	
-	
-	
 }
 
 interface Shortcuts{

@@ -98,7 +98,7 @@ public class MainBrowser {
 	    Browser.Bookmarks zohoMemberInner = zoho.new Bookmarks();  
 	    
 	    zohoMemberInner.messsageBookmarks();
-	   
+	    
 	    
 	    Shortcuts shortcuts = new Shortcuts() {
 	    	@Override
@@ -113,13 +113,6 @@ public class MainBrowser {
 	    //<----------------------------->
 	    shortcuts.messageShortcuts();
 	}
-	
-	
-	BrowserHistory obj = new BrowserHistory("www.zoho.com");
-	//System.out.println(obj.back(3));
-	
-	 //obj.back(3);
-	
 	
 }
 
