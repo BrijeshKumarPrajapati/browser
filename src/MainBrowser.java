@@ -115,7 +115,7 @@ public class MainBrowser {
 	}
 	
 	
-	BrowserHistory obj = new BrowserHistory("www.zoho.com");
+	BrowserHistory1 obj = new BrowserHistory1("www.zoho.com");
 	//System.out.println(obj.back(3));
 	
 	 //obj.back(3);
