@@ -18,13 +18,11 @@ import java.util.Collections;
 import com.sun.javafx.collections.MappingChange.Map;
 
 
-
-
 //$Id$
 
 public class BrowserHistory {
 	private String currentUrl; 
-	 /*private List <String> historyArrayList = new ArrayList<> ();
+	 private List <String> historyArrayList = new ArrayList<> ();
 	 private List <String> historyLinkedList = new LinkedList();  
 	 private List <String> historyVector = new Vector();  
 	 private List <String> historyStack = new Stack();  
@@ -43,9 +41,9 @@ public class BrowserHistory {
 	 private Set<String>  historyHashSet = new HashSet<String> ();
 	 private Set<String> historyLinkedHashSet = new LinkedHashSet<String>();  		
 	 private SortedSet<String> historySortedSet = new  TreeSet<String> ();
-	 */
 	 
 	 
+	 /*
 	 private List<String> extentionUrlCom = new ArrayList <String> ();
 	 private List<String> extentionUrlIn = new ArrayList <String> (); 
 	 private List<String> extentionUrlOrg = new ArrayList <String> ();
@@ -56,7 +54,7 @@ public class BrowserHistory {
 	 private  LinkedHashMap<String, List> historyLinkedHashMap = new LinkedHashMap<String, List>();
 	 
 	 
-	
+	*/
 	 
 	 /*
 	 private String keyCom;
@@ -66,7 +64,7 @@ public class BrowserHistory {
 	 int j=0;
 	        
 	        
-	     /*   public void visit(String url) {
+	       public void visit(String url) {
 	        	currentUrl = url;
 	        	//<-------------------Part-1------------->S
 				historyArrayList.add(url);
@@ -111,11 +109,11 @@ public class BrowserHistory {
 				historySortedSet.add("www.bcdef.in");
 				System.out.println("The Sorted Set is: "+historySortedSet);   
 	        	
-	        	}*/
+	        	}
 	        	
 	        	
 	 
-				 /*  public void sort() {
+				   public void sort() {
 			 	
 			 	Collections.sort(this.historyArrayList);
 			 	Collections.sort(this.historyLinkedList);
@@ -131,23 +129,22 @@ public class BrowserHistory {
 			  // To sort a set you must first convert the set to a list 
 			  // and then sort the list.
 			  }
-			*/
+			
 	 
 	 
-	 
-	 
-					 /*  public void deleteHistory(int index) {
-					    
-					   
-					   historyArrayList.remove(index);
-					   historyLinkedList.remove(index);
-					   historyVector.remove(index);
-					   historyStack.remove(index);
-					   
-					    System.out.println("After index deletion the array list is: "+ historyArrayList);
-				      System.out.println("After index deletion the linked list is: "+ historyLinkedList);
-				      System.out.println("After index deletion the vector is: "+ historyVector);
-				      System.out.println("After index deletion the stack is: "+ historyStack);
+					   public void deleteHistory(int index) {
+						   if(index>=0 && index<historyArrayList.size()) {
+					     historyArrayList.remove(index);
+					     historyLinkedList.remove(index);
+					     historyVector.remove(index);
+					     historyStack.remove(index);
+					     System.out.println("After index deletion the array list is: "+ historyArrayList);
+				         System.out.println("After index deletion the linked list is: "+ historyLinkedList);
+				         System.out.println("After index deletion the vector is: "+ historyVector);
+				         System.out.println("After index deletion the stack is: "+ historyStack);
+						   } else {
+							   System.out.println("Trying the delete the history using index: index out of bond");
+						   }
 					   
 					   
 					   System.out.println("<------------------------------->");
@@ -155,18 +152,40 @@ public class BrowserHistory {
 					   // To remove an element from a set at a specific index, you must first convert the set to a list 
 					   // and then remove the element at the specified index from the list or array.
 					   
-				  } */
+				  } 
 	 
 	 
 				        
 	 
 	 
 	  
-			     /* public void deleteHistory(String url) {
-			      	historyArrayList.remove(url);
-			      	   historyLinkedList.remove(url);
-			      	   historyVector.remove(url);
-			      	   historyStack.remove(url);
+			      public void deleteHistory(String url) {
+			    	  
+			    	  
+			    	  for (int m=0;m<historyArrayList.size();m++) {
+			    		  if (url.equals(historyArrayList.get(m))){
+			    			  historyArrayList.remove(url);
+			    		  }
+			    	  }
+			    	  
+			    	  for (int m=0;m< historyLinkedList.size();m++) {
+			    		  if (url.equals( historyLinkedList.get(m))){
+			    			  historyLinkedList.remove(url);
+			    		  }
+			    	  }
+			    	  
+			    	  for (int m=0;m< historyVector.size();m++) {
+			    		  if (url.equals( historyVector.get(m))){
+			    			  historyVector.remove(url);
+			    		  }
+			    	  }
+			    	  
+			    	  for (int m=0;m<historyStack.size();m++) {
+			    		  if (url.equals(historyStack.get(m))){
+			    			  historyStack.remove(url);
+			    		  }
+			    	  }
+			    	 
 			      	   System.out.println("After url deletion the array list is: "+ historyArrayList);
 				           System.out.println("After url deletion the linked list is: "+ historyLinkedList);
 				           System.out.println("After url deletion the vector is: "+ historyVector);
@@ -179,55 +198,50 @@ public class BrowserHistory {
 				        	   System.out.println("After url deletion the hash set is: "+ historyHashSet);
 					           System.out.println("After url deletion the linked hash set is: "+ historyLinkedHashSet);
 					           System.out.println("After url deletion the sorted set is: "+ historySortedSet);
-					           } */
+					           } 
 			        
-	 
-	 /*
-	 
-	  public void fetchHistory() {
-      	System.out.println("<------------------------------->");
-         System.out.println("The current history is: "+ historyArrayList);
-         System.out.println("<------------------------------->");
-          
-      }
-	 */
-	 
-	 
-	 
+	
+			 
+			  public void fetchHistory() {
+		      	System.out.println("<------------------------------->");
+		         System.out.println("The current history is: "+ historyArrayList);
+		         System.out.println("<------------------------------->");
+		          
+		      }
+	
+			  
+			  
+		        public void size() {
+		        	    
+		        	    System.out.println("The size of history array list: "  +historyArrayList.size());
+		        	
+		         }
+		        
 	  
-     /* 
-      public void search(String extension) {
-      	System.out.print("The history having desired extention: ");
-          for (String url : historyArrayList) {
-              if (url.endsWith(extension)) {
-                  System.out.println(url);
-              }
-          }
-      }
-      */
+		      public void search(String extension) {
+		      	System.out.print("The history having desired extention: ");
+		          for (String url : historyArrayList) {
+		              if (url.endsWith(extension)) {
+		                  System.out.println(url);
+		              }
+		          }
+		      }
+      
 	 
+	 
+		     public void updateHistory(int index, String newUrl) {
+		          historyArrayList.set(index, newUrl);
+		          System.out.println("The updated history is: "+historyArrayList);
+		   
+		     } 
+     
+     
+   
 	 
 	 
 	 
 	 
 	 /*
-     public void updateHistory(int index, String newUrl) {
-          historyArrayList.set(index, newUrl);
-          System.out.println("The updated history is: "+historyArrayList);
-   
-     } */
-     
-     
-    /* 
-     public void search(String extension) {
-     	System.out.print("The history having desired extention: ");
-         for (String url : historyArrayList) {
-             if (url.endsWith(extension)) {
-                 System.out.println(url);
-             }
-         }
-     }
-     */
 	 
 	       public void visit(String url) {
             	currentUrl = url;   		
@@ -344,12 +358,12 @@ public class BrowserHistory {
 	        	}
 	       }
 	          
-	       
+	       */
 	        
 	    public static void main(String [] args) {
 	    	String url;
 	    	
-	    	/*System.out.print("Enter Homepage url: ");
+	    	System.out.print("Enter Homepage url: ");
 	    	Scanner input = new Scanner(System.in);
 	    	url = input.nextLine();
 	    	
@@ -360,7 +374,7 @@ public class BrowserHistory {
 	    	System.out.print("enter the url to delete: ");
 	    	String urlDelete = input.nextLine();
 	    	
-	    	System.out.print("enter the extention to delete: ");
+	    	System.out.print("enter the extention to search: ");
 	    	String extention = input.nextLine();
 	    	
 	    	System.out.print("enter the index at update: ");
@@ -378,8 +392,10 @@ public class BrowserHistory {
 	    	browserHistory.fetchHistory();
             browserHistory.search(extention);
             browserHistory.size();
-            browserHistory.updateHistory(indexUpdate, newUrl);*/
+            browserHistory.updateHistory(indexUpdate, newUrl);
 	    	
+	    	
+	    	/*
 	    	BrowserHistory browserHistory = new BrowserHistory ();
 	    	
 	    	System.out.print("enter url to visit: ");
@@ -401,7 +417,7 @@ public class BrowserHistory {
 	    	browserHistory.fetchHistory();
 	    	browserHistory.size();
 	    	browserHistory.search(searchWord);
-	    	
+	    	*/
 	    }
 
 }
